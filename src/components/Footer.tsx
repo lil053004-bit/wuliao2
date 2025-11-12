@@ -185,7 +185,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6">
             {/* Legal Documents */}
             <div>
-              <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm">
+              <h4 className="font-bold text-white mb-3 flex items-center gap-2 text-sm">
                 <FileText className="w-4 h-4" />
                 法的文書
               </h4>
@@ -193,7 +193,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/terms"
-                    className="text-accent-gold hover:text-accent-gold-light hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     利用規約 <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -201,7 +201,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/privacy"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     プライバシーポリシー <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -209,7 +209,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/disclaimer"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     免責事項 <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -217,7 +217,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/risk-disclosure"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     リスク開示書面 <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -225,7 +225,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/specified-commercial-transaction-act"
-                    className="text-gray-700 hover:text-white hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     特定商取引法表記 <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -235,7 +235,7 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm">
+              <h4 className="font-bold text-white mb-3 flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4" />
                 お問い合わせ
               </h4>
@@ -243,7 +243,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/contact"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     お問い合わせフォーム <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -251,7 +251,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/faq"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     よくある質問 <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -259,16 +259,16 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/support"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     サポート <ExternalLink className="w-3 h-3" />
                   </Link>
                 </li>
-                <li className="flex items-center gap-1 text-gray-800">
+                <li className="flex items-center gap-1 text-white">
                   <Phone className="w-3 h-3" />
                   <span>+81 3-5555-1234</span>
                 </li>
-                <li className="text-gray-700 text-xs">
+                <li className="text-white text-xs">
                   受付時間: 平日 9:00-18:00
                 </li>
               </ul>
@@ -276,23 +276,23 @@ export default function Footer() {
 
             {/* Service Information */}
             <div>
-              <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm">
+              <h4 className="font-bold text-white mb-3 flex items-center gap-2 text-sm">
                 <Info className="w-4 h-4" />
                 サービス情報
               </h4>
-              <ul className="space-y-2 text-xs sm:text-sm text-gray-800">
+              <ul className="space-y-2 text-xs sm:text-sm text-white">
                 <li>株式会社金融グループ</li>
-                <li>AI株式診断サービス</li>
-                <li>リアルタイム株価情報</li>
-                <li>テクニカル分析</li>
-                <li>銘柄スクリーニング</li>
+                <li>AI株式情報提供ツール</li>
+                <li>市場データ情報表示</li>
+                <li>参考資料提供サービス</li>
+                <li>教育・学習用ツール</li>
                 <li>データ提供: 公開市場情報</li>
               </ul>
             </div>
 
             {/* Company Information */}
             <div>
-              <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm">
+              <h4 className="font-bold text-white mb-3 flex items-center gap-2 text-sm">
                 <Building className="w-4 h-4" />
                 運営会社
               </h4>
@@ -300,7 +300,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/about"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     会社概要 <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -308,7 +308,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/team"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     チーム紹介 <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -316,7 +316,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/careers"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     採用情報 <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -324,7 +324,7 @@ export default function Footer() {
                 <li>
                   <Link
                     to="/press"
-                    className="text-gray-700 hover:text-gray-900 hover:underline flex items-center gap-1"
+                    className="text-white hover:text-accent-gold-light hover:underline flex items-center gap-1"
                   >
                     プレスリリース <ExternalLink className="w-3 h-3" />
                   </Link>
@@ -335,13 +335,14 @@ export default function Footer() {
 
           {/* Copyright Section */}
           <div className="border-t border-gray-700 pt-4 text-center">
-            <p className="text-xs sm:text-sm text-gray-700 mb-2 font-medium">
+            <p className="text-xs sm:text-sm text-white mb-2 font-medium">
               &copy; {currentYear} 栫式会社結禾テクノロジーズ. All rights reserved.
             </p>
-            <p className="text-[10px] sm:text-xs text-gray-500 leading-relaxed max-w-3xl mx-auto">
-              当サイトで提供される情報は投資勧誘を目的としたものではありません。
-              投資に関する最終決定は、利用者ご自身の判断でなさるようお願いいたします。
-              掲載されている情報の正確性については万全を期しておりますが、その内容の正確性、安全性、有用性を保証するものではありません。
+            <p className="text-[10px] sm:text-xs text-white/90 leading-relaxed max-w-3xl mx-auto">
+              当サイトで提供される情報は教育・学習用の参考資料であり、投資勧誘・投資助言を目的としたものではありません。
+              投資に関する最終決定は、利用者ご自身の責任と判断で行ってください。
+              本サービスは金融商品取引業者ではなく、個別の投資助言を行うことはできません。
+              掲載されている情報の正確性、完全性、適時性について保証するものではありません。
             </p>
           </div>
         </div>

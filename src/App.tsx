@@ -29,10 +29,7 @@ function App() {
     <div
       className="min-h-screen relative"
       style={{
-        backgroundImage: 'url(/assets/background.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        background: 'linear-gradient(135deg, #1a0f0a 0%, #2d1810 25%, #1f1108 50%, #2d1810 75%, #1a0f0a 100%)'
       }}
     >
       <ParticleBackground />

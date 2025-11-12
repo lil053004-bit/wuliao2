@@ -68,9 +68,9 @@ export default function RadarStockDiscovery() {
       ctx.clearRect(0, 0, rect.width, rect.height);
 
       const colors = [
-        { base: 'rgba(0, 200, 255, 0.4)', glow: 'rgba(0, 200, 255, 0.6)' },
-        { base: 'rgba(255, 100, 200, 0.4)', glow: 'rgba(255, 100, 200, 0.6)' },
-        { base: 'rgba(100, 255, 100, 0.4)', glow: 'rgba(100, 255, 100, 0.6)' },
+        { base: 'rgba(255, 140, 66, 0.5)', glow: 'rgba(255, 140, 66, 0.7)' },
+        { base: 'rgba(255, 167, 38, 0.5)', glow: 'rgba(255, 167, 38, 0.7)' },
+        { base: 'rgba(255, 183, 77, 0.5)', glow: 'rgba(255, 183, 77, 0.7)' },
       ];
 
       for (let i = 1; i <= 3; i++) {
@@ -88,7 +88,7 @@ export default function RadarStockDiscovery() {
       }
       ctx.shadowBlur = 0;
 
-      ctx.strokeStyle = 'rgba(200, 150, 255, 0.3)';
+      ctx.strokeStyle = 'rgba(255, 167, 38, 0.25)';
       ctx.lineWidth = 1.5;
       for (let i = 0; i < 8; i++) {
         const angle = (i / 8) * Math.PI * 2;
@@ -102,9 +102,9 @@ export default function RadarStockDiscovery() {
       }
 
       const sweepGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxRadius);
-      sweepGradient.addColorStop(0, 'rgba(255, 200, 0, 0.3)');
-      sweepGradient.addColorStop(0.5, 'rgba(255, 100, 150, 0.2)');
-      sweepGradient.addColorStop(1, 'rgba(100, 200, 255, 0.05)');
+      sweepGradient.addColorStop(0, 'rgba(255, 167, 38, 0.4)');
+      sweepGradient.addColorStop(0.5, 'rgba(255, 140, 66, 0.25)');
+      sweepGradient.addColorStop(1, 'rgba(255, 183, 77, 0.1)');
 
       ctx.fillStyle = sweepGradient;
       ctx.beginPath();
@@ -114,8 +114,8 @@ export default function RadarStockDiscovery() {
       ctx.fill();
 
       const trailGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxRadius);
-      trailGradient.addColorStop(0, 'rgba(100, 200, 255, 0.15)');
-      trailGradient.addColorStop(1, 'rgba(100, 200, 255, 0)');
+      trailGradient.addColorStop(0, 'rgba(255, 167, 38, 0.2)');
+      trailGradient.addColorStop(1, 'rgba(255, 167, 38, 0)');
 
       ctx.fillStyle = trailGradient;
       ctx.beginPath();
@@ -149,9 +149,10 @@ export default function RadarStockDiscovery() {
           else if (stock.size === 'medium') fontSize = 18;
           else fontSize = 14;
 
-          const hue = (index * 30 + Date.now() * 0.05) % 360;
-          const color = `hsla(${hue}, 85%, 65%, ${alpha})`;
-          const glowColor = `hsla(${hue}, 90%, 70%, 0.8)`;
+          const warmHues = [25, 30, 35, 40, 45];
+          const hue = warmHues[index % warmHues.length];
+          const color = `hsla(${hue}, 90%, 65%, ${alpha})`;
+          const glowColor = `hsla(${hue}, 95%, 70%, 0.8)`;
 
           ctx.font = `bold ${fontSize}px 'Noto Sans JP', sans-serif`;
           ctx.fillStyle = color;

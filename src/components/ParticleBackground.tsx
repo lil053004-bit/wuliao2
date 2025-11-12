@@ -32,13 +32,13 @@ export default function ParticleBackground() {
         }
       },
       color: {
-        value: ['#a8d8ea', '#b3e5fc', '#81d4fa', '#4fc3f7', '#ffffff']
+        value: ['#ff8c42', '#ffa726', '#ffb74d', '#ffc966', '#ffd699']
       },
       shape: {
         type: 'circle'
       },
       opacity: {
-        value: { min: 0.1, max: 0.5 },
+        value: { min: 0.15, max: 0.4 },
         animation: {
           enable: true,
           speed: 0.5,

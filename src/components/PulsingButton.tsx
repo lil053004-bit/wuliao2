@@ -21,16 +21,7 @@ export default function PulsingButton({ onClick, stockName = '', disabled = fals
           disabled={disabled}
           className="relative group disabled:opacity-50 disabled:cursor-not-allowed w-full transform transition-all duration-300 hover:scale-105 active:scale-95"
         >
-          <div
-            className="relative px-8 py-5 overflow-hidden animate-button-pulse animate-glow-ring"
-            style={{
-              backgroundImage: 'url(/assets/button.png)',
-              backgroundSize: '100% 100%',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              willChange: 'transform'
-            }}
-          >
+          <div className="relative px-8 py-5 overflow-hidden rounded-xl bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500 animate-button-pulse animate-glow-ring shadow-[0_0_30px_rgba(255,140,66,0.5)]">
             <div
               className="absolute inset-0 opacity-30 animate-gradient-shift"
               style={{
@@ -49,11 +40,11 @@ export default function PulsingButton({ onClick, stockName = '', disabled = fals
 
             <div className="relative flex flex-col items-center justify-center gap-2">
               <div className="flex items-center gap-3">
-                <Sparkles className="w-6 h-6 animate-spin text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]" style={{ animationDuration: '3s' }} />
-                <span className="font-black text-lg text-red-600 drop-shadow-lg">{buttonText}</span>
-                <Zap className="w-6 h-6 text-red-500 animate-icon-bounce drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                <Sparkles className="w-6 h-6 animate-spin text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" style={{ animationDuration: '3s' }} />
+                <span className="font-black text-lg text-white drop-shadow-lg">{buttonText}</span>
+                <Zap className="w-6 h-6 text-white animate-icon-bounce drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
               </div>
-              <span className="text-xs text-red-700 font-semibold">※教育・学習用の情報表示</span>
+              <span className="text-xs text-orange-100 font-semibold">※教育・学習用の情報表示</span>
             </div>
           </div>
         </button>

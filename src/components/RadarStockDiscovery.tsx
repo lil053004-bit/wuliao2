@@ -67,18 +67,28 @@ export default function RadarStockDiscovery() {
 
       ctx.clearRect(0, 0, rect.width, rect.height);
 
-      ctx.shadowColor = 'rgba(255, 167, 38, 0.5)';
-      ctx.shadowBlur = 8;
-      ctx.strokeStyle = 'rgba(255, 167, 38, 0.4)';
-      ctx.lineWidth = 2;
+      const colors = [
+        { base: 'rgba(0, 200, 255, 0.4)', glow: 'rgba(0, 200, 255, 0.6)' },
+        { base: 'rgba(255, 100, 200, 0.4)', glow: 'rgba(255, 100, 200, 0.6)' },
+        { base: 'rgba(100, 255, 100, 0.4)', glow: 'rgba(100, 255, 100, 0.6)' },
+      ];
+
       for (let i = 1; i <= 3; i++) {
+        const colorSet = colors[i - 1];
+        const pulseOffset = Math.sin(Date.now() * 0.001 + i * 0.5) * 0.15;
+
+        ctx.shadowColor = colorSet.glow;
+        ctx.shadowBlur = 8 + pulseOffset * 5;
+        ctx.strokeStyle = colorSet.base.replace('0.4', String(0.4 + pulseOffset));
+        ctx.lineWidth = 2 + pulseOffset * 0.5;
+
         ctx.beginPath();
         ctx.arc(centerX, centerY, (maxRadius / 3) * i, 0, Math.PI * 2);
         ctx.stroke();
       }
       ctx.shadowBlur = 0;
 
-      ctx.strokeStyle = 'rgba(255, 167, 38, 0.35)';
+      ctx.strokeStyle = 'rgba(200, 150, 255, 0.3)';
       ctx.lineWidth = 1.5;
       for (let i = 0; i < 8; i++) {
         const angle = (i / 8) * Math.PI * 2;
@@ -91,26 +101,32 @@ export default function RadarStockDiscovery() {
         ctx.stroke();
       }
 
-      const gradient = ctx.createLinearGradient(
-        centerX,
-        centerY,
-        centerX + Math.cos(radarAngle) * maxRadius,
-        centerY + Math.sin(radarAngle) * maxRadius
-      );
-      gradient.addColorStop(0, 'rgba(255, 167, 38, 0)');
-      gradient.addColorStop(0.5, 'rgba(255, 167, 38, 0.4)');
-      gradient.addColorStop(1, 'rgba(255, 167, 38, 0.05)');
+      const sweepGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxRadius);
+      sweepGradient.addColorStop(0, 'rgba(255, 200, 0, 0.3)');
+      sweepGradient.addColorStop(0.5, 'rgba(255, 100, 150, 0.2)');
+      sweepGradient.addColorStop(1, 'rgba(100, 200, 255, 0.05)');
 
-      ctx.fillStyle = gradient;
+      ctx.fillStyle = sweepGradient;
       ctx.beginPath();
       ctx.moveTo(centerX, centerY);
       ctx.arc(centerX, centerY, maxRadius, radarAngle - 0.5, radarAngle);
       ctx.lineTo(centerX, centerY);
       ctx.fill();
 
+      const trailGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, maxRadius);
+      trailGradient.addColorStop(0, 'rgba(100, 200, 255, 0.15)');
+      trailGradient.addColorStop(1, 'rgba(100, 200, 255, 0)');
+
+      ctx.fillStyle = trailGradient;
+      ctx.beginPath();
+      ctx.moveTo(centerX, centerY);
+      ctx.arc(centerX, centerY, maxRadius, radarAngle - 1.5, radarAngle - 0.5);
+      ctx.lineTo(centerX, centerY);
+      ctx.fill();
+
       radarAngle += 0.02;
 
-      stockPositions.forEach((stock) => {
+      stockPositions.forEach((stock, index) => {
         stock.angle += 0.003;
         const adjustedRadius = stock.radius * (maxRadius / 200);
         stock.x = centerX + Math.cos(stock.angle) * adjustedRadius;
@@ -133,13 +149,17 @@ export default function RadarStockDiscovery() {
           else if (stock.size === 'medium') fontSize = 18;
           else fontSize = 14;
 
+          const hue = (index * 30 + Date.now() * 0.05) % 360;
+          const color = `hsla(${hue}, 85%, 65%, ${alpha})`;
+          const glowColor = `hsla(${hue}, 90%, 70%, 0.8)`;
+
           ctx.font = `bold ${fontSize}px 'Noto Sans JP', sans-serif`;
-          ctx.fillStyle = `rgba(255, 167, 38, ${alpha})`;
+          ctx.fillStyle = color;
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
 
-          ctx.shadowColor = 'rgba(255, 167, 38, 0.8)';
-          ctx.shadowBlur = 10;
+          ctx.shadowColor = glowColor;
+          ctx.shadowBlur = 15;
           ctx.fillText(stock.name, stock.x, stock.y);
           ctx.shadowBlur = 0;
         }
@@ -161,7 +181,7 @@ export default function RadarStockDiscovery() {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: '8px' }}
+        style={{ borderRadius: '8px' }}
       />
     </div>
   );

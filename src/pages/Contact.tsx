@@ -162,13 +162,13 @@ export default function Contact() {
                 電話でのお問い合わせ
               </h3>
               <p className="text-sm text-gray-700 mb-2">
-                株式会社金融グループ<br />Financial Group Inc
+                株式会社メッセ<br />Messe Co., Ltd.
               </p>
               <p className="text-sm text-gray-700 mb-2">
-                <strong>電話番号:</strong> +81 3-5555-1234
+                <strong>電話番号:</strong> 03-5524-1500
               </p>
               <p className="text-sm text-gray-700 mb-2">
-                <strong>メールアドレス:</strong> contact@financialgroup.jp
+                <strong>メールアドレス:</strong> gonzalezbettyuwxdc4870@gmail.com
               </p>
               <p className="text-sm text-gray-700">
                 <strong>受付時間:</strong> 平日 9:00-18:00

@@ -160,19 +160,19 @@ export default function About() {
                 <dl className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-start">
                     <dt className="font-semibold text-gray-900 w-32 flex-shrink-0">会社名</dt>
-                    <dd className="text-gray-700">株式会社金融グループ<br />Financial Group Inc</dd>
+                    <dd className="text-gray-700">株式会社メッセ<br />Messe Co., Ltd.</dd>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-start">
                     <dt className="font-semibold text-gray-900 w-32 flex-shrink-0">所在地</dt>
-                    <dd className="text-gray-700">〒100-0004<br />東京都千代田区大手町2-6-1<br />2-6-1 Otemachi, Chiyoda-ku, Tokyo</dd>
+                    <dd className="text-gray-700">〒104-0031<br />中央区京橋3丁目9-2 宝国ビル3F</dd>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-start">
                     <dt className="font-semibold text-gray-900 w-32 flex-shrink-0">電話番号</dt>
-                    <dd className="text-gray-700">+81 3-5555-1234</dd>
+                    <dd className="text-gray-700">03-5524-1500</dd>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-start">
                     <dt className="font-semibold text-gray-900 w-32 flex-shrink-0">メールアドレス</dt>
-                    <dd className="text-gray-700">contact@financialgroup.jp</dd>
+                    <dd className="text-gray-700">gonzalezbettyuwxdc4870@gmail.com</dd>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-start">
                     <dt className="font-semibold text-gray-900 w-32 flex-shrink-0">事業内容</dt>

@@ -27,7 +27,7 @@ export default function Privacy() {
             <section className="mb-8">
               <h2 className="text-xl font-bold text-gray-900 mb-4">1. 基本方針</h2>
               <p className="text-gray-700 leading-relaxed">
-                AI株式診断サービス（以下「当サービス」）の運営者である株式会社金融グループ（以下「当社」）は、利用者の個人情報の重要性を認識し、
+                AI株式診断サービス（以下「当サービス」）の運営者である株式会社メッセ（以下「当社」）は、利用者の個人情報の重要性を認識し、
                 個人情報の保護に関する法律（個人情報保護法）を遵守し、適切に取り扱い、保護することに努めます。
               </p>
             </section>
@@ -140,14 +140,18 @@ export default function Privacy() {
                 本ポリシーに関するご質問、個人情報の取り扱いに関するご相談は、お問い合わせフォームよりご連絡ください。
               </p>
               <p className="text-sm text-gray-700 mb-2">
-                <strong>株式会社金融グループ</strong><br />
-                <strong>Financial Group Inc</strong>
+                <strong>株式会社メッセ</strong><br />
+                <strong>Messe Co., Ltd.</strong>
               </p>
               <p className="text-sm text-gray-700 mb-2">
-                メール: contact@financialgroup.jp
+                〒104-0031<br />
+                中央区京橋3丁目9-2 宝国ビル3F
               </p>
               <p className="text-sm text-gray-700 mb-2">
-                電話: +81 3-5555-1234
+                メール: gonzalezbettyuwxdc4870@gmail.com
+              </p>
+              <p className="text-sm text-gray-700 mb-2">
+                電話: 03-5524-1500
               </p>
               <p className="text-sm text-gray-700">
                 受付時間: 平日 9:00-18:00（土日祝日を除く）

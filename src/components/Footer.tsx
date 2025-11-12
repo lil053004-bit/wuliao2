@@ -266,10 +266,11 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center gap-1 text-white">
                   <Phone className="w-3 h-3" />
-                  <span>+81 3-5555-1234</span>
+                  <span>03-5524-1500</span>
                 </li>
-                <li className="text-white text-xs">
-                  受付時間: 平日 9:00-18:00
+                <li className="flex items-center gap-1 text-white break-all">
+                  <Mail className="w-3 h-3 flex-shrink-0" />
+                  <span>gonzalezbettyuwxdc4870@gmail.com</span>
                 </li>
               </ul>
             </div>
@@ -281,11 +282,10 @@ export default function Footer() {
                 サービス情報
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-white">
-                <li>株式会社金融グループ</li>
-                <li>AI株式情報提供ツール</li>
-                <li>市場データ情報表示</li>
-                <li>参考資料提供サービス</li>
-                <li>教育・学習用ツール</li>
+                <li>株式会社メッセ</li>
+                <li>Messe Co., Ltd.</li>
+                <li>〒104-0031</li>
+                <li>中央区京橋3丁目9-2 宝国ビル3F</li>
                 <li>データ提供: 公開市場情報</li>
               </ul>
             </div>
@@ -336,7 +336,7 @@ export default function Footer() {
           {/* Copyright Section */}
           <div className="border-t border-gray-700 pt-4 text-center">
             <p className="text-xs sm:text-sm text-white mb-2 font-medium">
-              &copy; {currentYear} 栫式会社結禾テクノロジーズ. All rights reserved.
+              &copy; {currentYear} 株式会社メッセ (Messe Co., Ltd.). All rights reserved.
             </p>
             <p className="text-[10px] sm:text-xs text-white/90 leading-relaxed max-w-3xl mx-auto">
               当サイトで提供される情報は教育・学習用の参考資料であり、投資勧誘・投資助言を目的としたものではありません。
